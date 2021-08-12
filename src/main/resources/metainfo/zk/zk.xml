@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk>
+	<config-name>maximaboot</config-name>
+	
+	<!-- <listener>
+		<listener-class>org.zkoss.zkmax.au.websocket.WebSocketWebAppInit</listener-class>
+	</listener> -->
+	
+	<session-config>
+		<timer-keep-alive>true</timer-keep-alive>
+		<session-timeout>7200</session-timeout>
+		<max-pushes-per-session>-1</max-pushes-per-session>
+		<device-type>ajax</device-type>
+		<timeout-message>script:<![CDATA[
+		  $("#z-timeout").remove();
+		  $('body').mouseover(function() {
+		    setTimeout("location.reload()", 1000);
+		  });
+		]]></timeout-message>
+		<timer-keep-alive>true</timer-keep-alive>
+	</session-config>
+
+	<preference>
+		<name>org.zkoss.zul.Window.defaultActionOnShow</name>
+		<value></value>
+	</preference>
+
+	<library-property>
+		<name>org.zkoss.zul.Button.mold</name>
+		<value>bs</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.zul.Menupopup.mold</name>
+		<value>bs</value>
+	</library-property>
+	<!-- <library-property> <name>org.zkoss.zkmax.zul.Navbar.mold</name> <value>bs</value> </library-property> -->
+	<library-property>
+		<name>org.zkoss.zul.Paging.mold</name>
+		<value>bs</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.zul.Panel.mold</name>
+		<value>bs</value>
+	</library-property>
+
+	<library-property>
+		<name>org.zkoss.zul.listbox.autohidePaging</name>
+		<value>false</value>
+	</library-property>
+
+	<library-property>
+		<name>org.zkoss.zul.progressbox.position</name>
+		<value>center</value>
+	</library-property>
+
+	<library-property>
+		<name>org.zkoss.zkex.ui.comet.smartconnection.disabled</name>
+		<value>true</value>
+	</library-property>
+
+	<!-- fix paging issue -->
+	<library-property>
+		<name>org.zkoss.zul.grid.rod</name>
+		<value>true</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.zul.listbox.rod</name>
+		<value>true</value>
+	</library-property>
+	
+	<client-config>
+		<debug-js>false</debug-js>
+		<disable-behind-modal>true</disable-behind-modal>
+	</client-config>
+
+	<!-- Configure the error page -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>~./zuls/error.zul</location>
+	</error-page>
+
+</zk>

@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: dev
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration
+
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+    
+logging:
+  config: classpath:logback.xml
+  
+zk:
+  homepage: popupBug
+  zul-view-resolver-prefix: /zuls
+
+---
+spring:
+  profiles: dev
+    
+server:
+  servlet:
+    context-path: /demo

@@ -1,0 +1,23 @@
+<zk>
+	<vbox width="400px">
+		<button iconSclass="z-icon-user" label="bug1:no popup for zk9.6.0" popup="m1,after_start" />
+		<menupopup id="m1">
+			<menuitem label="EN" class="btn-default btn-xs" />
+		</menupopup>
+
+		<space />
+
+		<label value="bug2:listbox with an unexpected vertical scroll bar (for zk9.6.0)" />
+		<listbox hflex="true" rows="3" checkmark="true" multiple="false">
+			<listitem label="opt1" />
+			<listitem label="opt2" />
+			<listitem label="opt3" />
+		</listbox>
+		<space />
+		
+		<label value="bug3(for zk-springboot):" />
+		<label value="If a zul is accessed by springmvc redirection(like below), the modification on it will not affect unless restart." />
+		<label value="http://localhost:8080/demo/popupBug.html" />
+		
+	</vbox>
+</zk>
