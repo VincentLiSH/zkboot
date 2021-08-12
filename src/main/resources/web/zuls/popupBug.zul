@@ -7,7 +7,7 @@
 
 		<space />
 
-		<label value="bug2:listbox with an unexpected vertical scroll bar (for zk9.6.0)" />
+		<label value="bug2:listbox with an unexpected vertical scroll bar (for zk9.6.0 and Chrome92.0.4515.131)" />
 		<listbox hflex="true" rows="3" checkmark="true" multiple="false">
 			<listitem label="opt1" />
 			<listitem label="opt2" />
